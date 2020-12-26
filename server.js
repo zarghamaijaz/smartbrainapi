@@ -10,7 +10,7 @@ const image= require('./controllers/image')
 const db=knex({
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-sinuous-23940',
     user : 'postgres',
     password : 'zargham',
     database : 'smart-brain'

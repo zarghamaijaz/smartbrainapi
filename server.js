@@ -25,7 +25,7 @@ const db=knex({
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-const port=3000;
+const PORT=process.env.PORT;
 
 app.get('/',(req,res)=>{
 	res.json('Hi there!');
@@ -41,6 +41,6 @@ app.put('/image',(req,res)=>{image.handleImage(req,res,db)});
 
 
 
-app.listen(port,()=>{
-	console.log(`app in running on port ${port}`);
+app.listen(PORT,()=>{
+	console.log(`app in running on port ${PORT}`);
 });
